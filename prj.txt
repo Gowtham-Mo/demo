@@ -1,0 +1,88 @@
+{
+        "productName": "mobile",
+        "productId": 1,
+        "brandId": 12,
+        "price": 1000
+    }
+
+
+
+
+
+
+{
+    "customerId":1,
+    "productId":1,
+    "orderPlacedDate": "12-2-10",
+    "orderDispatchedDate": "4-2-43",
+    "orderDeliveredDate": "2-3-24",
+    "orderStatus" : "delivered",
+    "paymentSource" : "online",
+    "paymentStatus" : "Success"
+}
+
+
+
+{
+    "customerId":1,
+    "productId":1,
+    "orderPlacedDate": "12-2-10"
+}
+
+
+{
+    "customerId":1,
+    "productId":1,
+    "orderPlacedDate": "12-2-10",
+    "orderDispatchedDate": "4-2-43",
+    "orderDeliveredDate": "2-3-24",
+    "orderStatus" : "delivered",
+    "paymentSource" : "online",
+    "paymentStatus" : "Success"
+}
+
+
+
+{
+    "customerId":1,
+    "productId":1,
+    "orderPlacedDate": "12-2-10"
+}
+
+
+
+
+
+
+ProductControllerTest.java
+
+
+package com.example.demo.controller;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+
+import com.example.demo.model.Product;
+import com.example.demo.repository.ProductRepository;
+
+@DataJpaTest
+public class ProductControllerTest {
+	@Autowired
+	private TestEntityManager entityManager;
+	
+	@Autowired
+	private ProductRepository repository;
+	
+	/*@Test
+	public void testSaveNewProduct() {
+		entityManager.persist(new Product(1212, 59999, "iphone 12"));
+				
+		Product product = repository.findByproductName("iphone 12");
+		
+		assertThat(product.getProductName()).isEqualTo("iphone 12");
+	}*/
+}
